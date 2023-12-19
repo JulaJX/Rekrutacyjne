@@ -11,7 +11,7 @@ const PopUp = () => {
             setPopeUp(true)
         }, 30000); //30sec
         return () => clearTimeout(timer);
-      }, [popUp]);
+      }, []);
 
     return ( 
         <>
