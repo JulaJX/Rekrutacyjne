@@ -1,0 +1,31 @@
+// Variables
+
+// Primary colors
+$primary-1:hsl(231, 69%, 60%); //Light blue
+$primary-2: hsl(0, 94%, 66%); //Light red
+$white:white; //White
+
+// Secondary colors
+$secondary-1: hsl(229, 8%, 60%); //Light
+$secondary-2: hsl(229, 31%, 21%); //Dark blue
+
+//Additional colors
+$box-shadow:rgba(0, 0, 0, 0.24); //Box-shadow color
+$border:rgba(0, 0, 0, 0.155); //Border color
+$primary-1-opacity:rgba(1, 15, 72, 0.821);
+
+// Mixin's
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
+
+@mixin flexnowrap($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}

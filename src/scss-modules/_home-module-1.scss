@@ -1,0 +1,132 @@
+.HomeModule1 {
+    @include flexnowrap(center, center, row);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 6em;
+
+    @media(max-width:1440px) {
+        @include flexnowrap(center, center, column);
+        margin: 0;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    @media(max-width:640px) {
+        @include flexnowrap(center, center, column);
+        font-size: 0.6em;
+        text-align: center;
+        gap: 0em;
+
+    }
+
+    .left-side {
+        max-width: 29em;
+        gap: 2em;
+        @include flex(flex-start, center, row);
+
+        @media(max-width:1440px) {
+            @include flexnowrap(center, center, column);
+            order: 2;
+            margin-bottom: 12em;
+        }
+
+
+    }
+
+    h1 {
+        font-size: 2.2em;
+        color: $secondary-2;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        line-height: 1.1em;
+    }
+
+    p {
+        color: $secondary-1;
+        line-height: 1.6em;
+        letter-spacing: 0.05em;
+    }
+
+    .button-container {
+        @include flex(flex-start, flex-start, row);
+        gap: 2em;
+
+        @media(max-width:1440px) {
+            @include flex(center, center, row);
+        }
+    }
+
+    .button-chrome,
+    .button-firefox {
+        letter-spacing: 0.05em;
+        padding: 1em 2em;
+        font-weight: 500;
+        font-size: 0.8em;
+        border-radius: 7px;
+        box-shadow: $box-shadow 0px 3px 8px;
+        transition: 200ms ease-in-out;
+
+    }
+
+    .button-chrome {
+        background-color: $primary-1;
+        border: 2px solid $primary-1;
+        color: $white;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-1;
+        }
+    }
+
+    .button-firefox {
+        background-color: $white;
+        border: 2px solid $white;
+
+        &:hover {
+            border: 2px solid $secondary-2;
+        }
+    }
+
+    .right-side {
+        position: relative;
+        order: 1;
+    }
+
+    .blue-bg {
+        height: 20em;
+        width: 70em;
+        background-color: $primary-1;
+        position: absolute;
+        top: 7em;
+        left: 20em;
+        z-index: -1;
+        border-radius: 10em;
+
+        @media(max-width:1440px) {
+            top: 6em;
+            transform: scale(0.8);
+            height: 25em;
+        }
+
+        @media(max-width:640px) {
+            height: 25em;
+            top: 12em;
+        }
+    }
+
+    .svg {
+        @media(max-width:1440px) {
+            margin-left: 0em;
+            transform: scale(0.8);
+
+        }
+
+        @media(max-width:640px) {
+            transform: scale(0.6);
+
+
+        }
+    }
+
+}

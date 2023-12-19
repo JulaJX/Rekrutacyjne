@@ -1,0 +1,106 @@
+.HomeModule3 {
+    @include flex(center, center, column);
+    margin: 12em 0 10em 0;
+
+    @media(max-width:1440px) {
+        font-size: 0.8em;
+    }
+
+    @media(max-width:1440px) {
+        font-size: 0.6em;
+    }
+
+    h3 {
+        color: $secondary-2;
+        font-size: 2em;
+        margin: 0.8em 0;
+        font-weight: 500;
+    }
+
+    p {
+        color: $secondary-1;
+        text-align: center;
+        font-size: 1.1em;
+        line-height: 1.5em;
+        letter-spacing: 0.05em;
+        max-width: 30em;
+    }
+
+    .browser-container {
+        @include flexnowrap(center, center, row);
+        gap: 3em;
+        margin-top: 1em;
+
+        @media(max-width:1040px) {
+            @include flexnowrap(center, center, column);
+            margin-top: 6em;
+        }
+    }
+
+    .chrome-card,
+    .firefox-card,
+    .opera-card {
+        @include flex(center, center, column);
+        gap: 1em;
+        padding: 3em 0 0 0;
+        letter-spacing: 0.02em;
+        box-shadow: $box-shadow 0px 3px 8px;
+        transition: 200ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+
+    .firefox-card {
+        margin-top: 4em;
+    }
+
+    .opera-card {
+        margin-top: 8em
+    }
+
+    .svg {
+        @media(max-width:1440px) {
+            transform: scale(0.8);
+        }
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1.1em;
+        color: $secondary-2;
+
+    }
+
+    .desc {
+        color: $secondary-1;
+        font-size: 0.8em;
+    }
+
+    .install-button {
+        background-color: $primary-1;
+        color: $white;
+        padding: 1.1em 1.5em;
+        font-size: 0.7em;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        border-radius: 6px;
+        margin: 0 0 2.2em 0;
+        border: 2px solid $primary-1;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-1;
+        }
+
+    }
+
+    .dots {
+        margin: 1em 0 0.2em 0;
+    }
+
+
+}

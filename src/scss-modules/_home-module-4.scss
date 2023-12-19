@@ -1,0 +1,109 @@
+.HomeModule4 {
+    @include flex(center, center, column);
+    margin: 4em 0 20em 0;
+
+    @media(max-width:1440px) {
+        font-size: 0.8em;
+    }
+
+    @media(max-width:640px) {
+        font-size: 0.6em;
+    }
+
+    h4 {
+        color: $secondary-2;
+        font-size: 1.9em;
+        margin: 0.8em 0;
+        font-weight: 500;
+    }
+
+    p {
+        color: $secondary-1;
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.5em;
+        letter-spacing: 0.05em;
+        max-width: 30em;
+    }
+
+    .question-container {
+        max-width: 37em;
+        margin: 3em 0 3.6em 0;
+    }
+
+    .question:last-child {
+        border-bottom: 1px solid $border;
+    }
+
+    .more-info-button {
+        padding: 1em 1.8em;
+        background-color: $primary-1;
+        color: $white;
+        font-weight: 500;
+        font-size: 0.8em;
+        letter-spacing: 0.05em;
+        border-radius: 6px;
+        border: 2px solid $primary-1;
+        transition: 200ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-1;
+        }
+    }
+
+    .question {
+        @include flex(space-between, center, row);
+        padding: 1.3em 0.5em;
+        border-top: 1px solid $border;
+        font-size: 1em;
+        font-weight: 500;
+        color: $secondary-2;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+
+
+        &:hover {
+            color: $primary-2;
+        }
+
+        .selected {
+            filter: invert(55%) sepia(25%) saturate(4979%) hue-rotate(326deg) brightness(101%) contrast(96%);
+            transform: rotate(180deg);
+        }
+
+        p {
+            text-align: left;
+            margin: -5em 0;
+            font-weight: 400;
+            font-size: 1em;
+            transition: 200ms all;
+            opacity: 0;
+
+        }
+
+        .scroll {
+            animation: anim 500ms ease-in-out forwards;
+        }
+
+        @keyframes anim {
+            0% {
+                margin: -5em 0;
+                opacity: 0;
+                z-index: -1;
+            }
+
+            40% {
+                margin: 1.3em 0;
+            }
+
+            100% {
+                opacity: 1;
+                margin: 1.3em 0;
+            }
+        }
+    }
+
+
+}

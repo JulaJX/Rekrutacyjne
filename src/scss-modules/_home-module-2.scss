@@ -1,0 +1,168 @@
+.HomeModule2 {
+    @include flexnowrap(center, center, column);
+    margin: 4em 0 20em 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    @media(max-width:1440px) {
+        margin: 0;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    @media(max-width:640px) {
+        @include flexnowrap(center, center, column);
+        font-size: 0.6em;
+        text-align: center;
+    }
+
+    h2 {
+        color: $secondary-2;
+        font-size: 2em;
+        margin: 0.8em 0;
+        font-weight: 500;
+    }
+
+    p {
+        color: $secondary-1;
+        text-align: center;
+        font-size: 1.1em;
+        line-height: 1.5em;
+        letter-spacing: 0.05em;
+        max-width: 30em;
+    }
+
+    .features-container {
+        @include flex(center, center, row);
+        border-bottom: 2px solid $border;
+        margin: 4em 0;
+
+        @media(max-width:1440px) {
+            @include flex(center, center, column);
+            margin: 2em 0 0 0;
+        }
+    }
+
+    li {
+        width: 20em;
+        padding: 1.3em 0 1.3em 0;
+        margin-bottom: -0.1em;
+        text-align: center;
+    }
+
+    a {
+        color: $secondary-1;
+        padding: 0 4em 0 4em;
+        letter-spacing: 0.02em;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            color: $primary-2;
+        }
+    }
+}
+
+.HomeModule2Element {
+    @include flexnowrap(center, center, row);
+    gap: 20em;
+
+    @media(max-width:1440px) {
+        gap: 4em;
+        @include flexnowrap(center, center, column);
+    }
+
+    .right-side {
+        @include flexnowrap(center, flex-start, column);
+        gap: 1.5em;
+
+        @media(max-width:1440px) {
+            @include flex(center, center, column);
+            text-align: center;
+            margin: 6em 0;
+        }
+
+        @media(max-width:640px) {
+            margin: 4em 0 0 0
+        }
+    }
+
+    h1 {
+        font-size: 1.8em;
+        color: $secondary-2;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+        line-height: 1.1em;
+    }
+
+    p {
+        text-align: left;
+        color: $secondary-1;
+        line-height: 1.6em;
+
+        @media(max-width:1440px) {
+            text-align: center;
+        }
+    }
+
+    a {
+        padding: 1em 2em;
+        background-color: $primary-1;
+        color: $white;
+        font-weight: 500;
+        font-size: 0.9em;
+        border-radius: 7px;
+        box-shadow: $box-shadow 0px 3px 8px;
+        border: 2px solid $primary-1;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-1;
+        }
+    }
+
+    .left-side {
+        position: relative;
+        min-height: 30em;
+        @include flex(center, center, column);
+    }
+
+    .blue-bg {
+        position: absolute;
+        height: 20em;
+        width: 55em;
+        top: 10em;
+        right: 7em;
+        z-index: -1;
+        border-radius: 10em;
+        background-color: $primary-1;
+
+        @media(max-width:1440px) {
+            top: 6em;
+            transform: scale(0.8);
+            height: 25em;
+            width: 80em;
+            right: 7em;
+        }
+
+        @media(max-width:640px) {
+            height: 22em;
+            width: 80em;
+            right: 7em;
+            top: 12em;
+        }
+    }
+
+    .svg {
+        background-color: rgb(221, 220, 238);
+
+        @media(max-width:1440px) {
+
+            transform: scale(0.8);
+        }
+
+        @media(max-width:640px) {
+            transform: scale(0.6);
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.Footer {
+    @include flexnowrap(space-between, center, row);
+    padding: 2em 10em 2em 10em;
+    background-color: $secondary-2;
+
+    @media(max-width:1040px) {
+        font-size: 0.9em;
+    }
+
+    @media(max-width:1040px) {
+        @include flex(space-between, center, column);
+        gap: 3em;
+        padding: 2em 0em 2em 0em;
+    }
+
+    .left-side {
+        @include flex(center, center, row);
+        gap: 6em;
+
+        @media(max-width:1040px) {
+            @include flexnowrap(center, center, column);
+            gap: 2em;
+        }
+    }
+
+    ul {
+        @include flex(center, center, row);
+        gap: 5em;
+        font-size: 0.8em;
+        letter-spacing: 0.05em;
+
+        @media(max-width:1040px) {
+            @include flexnowrap(center, center, column);
+            gap: 3.2em;
+        }
+    }
+
+    a {
+        color: $secondary-1;
+        font-weight: 500;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            color: $primary-2;
+        }
+    }
+
+    .right-side {
+        @include flex(center, center, row);
+        gap: 2.8em;
+    }
+
+    .icon {
+        &:hover {
+            filter: invert(55%) sepia(25%) saturate(4979%) hue-rotate(326deg) brightness(101%) contrast(96%);
+        }
+    }
+}
